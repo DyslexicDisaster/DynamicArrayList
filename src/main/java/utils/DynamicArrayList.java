@@ -144,4 +144,23 @@ public class DynamicArrayList {
         }
         return cloned;
     }
+
+    /**
+     * Removes the first instanses of a given string
+     * @param toBeRemoved the string to be removed
+     * @return true or false depending on if toberemoved was successfully removed
+     */
+    public boolean remove(String toBeRemoved) {
+        if (toBeRemoved == null) {
+            throw new IllegalArgumentException("String to be removed cannot be null");
+        }
+
+        for (int i = 0;i<numElements;i++){
+            if (data[i].equals(toBeRemoved)){
+                data[i] = null;
+                return true;
+            }
+        }
+        return false;
+    }
 }
