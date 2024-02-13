@@ -9,6 +9,8 @@ public class DynamicArrayList {
     private int numElements;
     private static final int capacity = 10;
 
+    //Core methods
+
     /**
      *  Constructs a DynamicArrayList with the standard initial capacity.
      */
@@ -77,5 +79,55 @@ public class DynamicArrayList {
         }
         data[numElements++] = element;
         return true;
+    }
+    /**
+     * Checks if the list is empty.
+     * @return true if the list is empty, false otherwise.
+     */
+    public boolean isEmpty() {
+        return numElements == 0;
+    }
+
+    //unique methods
+
+    public DynamicArrayList(String[] arr) {
+        if (arr == null) {
+            throw new IllegalArgumentException("Array is null");
+        }
+        /*if (arr.length > capacity) {
+            data = new String[arr.length];
+        } else {
+            data = new String[capacity];
+        }*/
+        data = new String[capacity];
+        numElements = 0;
+
+        /*while (arr.length > capacity) {
+            grow();
+        }*/
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == null) {
+                throw new IllegalArgumentException("Elements in the array can't be null");
+            }
+            //data[numElements++] = arr[i];
+            add(arr[i]);
+        }
+    }
+
+    public String set(int pos, String newData) {
+        if (pos < 0 || pos >= numElements) {
+            throw new IndexOutOfBoundsException("Invalid position");
+        }
+        String og = data[pos];
+        data[pos] = newData;
+        return og;
+    }
+
+    public DynamicArrayList clone() {
+        DynamicArrayList cloned = new DynamicArrayList();
+        for (int i = 0; i < numElements; i++) {
+            cloned.add(data[i]);
+        }
+        return cloned;
     }
 }

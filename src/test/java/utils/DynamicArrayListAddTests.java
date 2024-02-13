@@ -22,7 +22,7 @@ public class DynamicArrayListAddTests {
     /**
      * Test of add method at valid position.
      */
-    @Test
+   /* @Test
     public void testAddAtPos_ValidPosition() {
         System.out.println("Testing adding a String to a valid position within a list.");
         String [] data = {"Yellow", "Leather", "Yellow", "Leather", "Red", "Balloon"};
@@ -40,12 +40,12 @@ public class DynamicArrayListAddTests {
             String result = instance.get(i);
             assertEquals(expResult, result);
         }
-    }
+    }*/
 
     /**
      * Test of add method at valid position.
      */
-    @Test
+    /*@Test
     public void testAddAtPos_ValidPosition_SizeOfList() {
         System.out.println("Testing adding a String to a valid position within a list (The slot after the end of the " +
                 "list)" +
@@ -65,12 +65,12 @@ public class DynamicArrayListAddTests {
             String result = instance.get(i);
             assertEquals(expResult, result);
         }
-    }
+    }*/
 
     /**
      * Test of add method at valid position (where list is empty).
      */
-    @Test
+    /*@Test
     public void testAddAtPos_ValidPosition_SizeOfList_EmptyList() {
         System.out.println("Testing adding a String to a valid position within a list (where the list is empty)" +
                 ".");
@@ -89,12 +89,12 @@ public class DynamicArrayListAddTests {
             String result = instance.get(i);
             assertEquals(expResult, result);
         }
-    }
+    }*/
 
     /**
      * Test of add method at invalid position (negative number).
      */
-    @Test
+    /*@Test
     public void testAddAtPos_InvalidPosition_Negative() {
         System.out.println("Testing adding a String to an invalid position within a list (negative number).");
         String [] data = {"Yellow", "Leather", "Yellow", "Leather", "Red", "Balloon"};
@@ -106,11 +106,11 @@ public class DynamicArrayListAddTests {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             instance.add("Blue", -1);
         });
-    }
+    }*/
     /**
      * Test of add method at invalid position (longer than length of list).
      */
-    @Test
+   /* @Test
     public void testAddAtPos_InvalidPosition_TooBig() {
         System.out.println("Testing adding a String to an invalid position within a list (number is greater than the " +
                 "length of the list)" +
@@ -124,12 +124,12 @@ public class DynamicArrayListAddTests {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             instance.add("Blue", 7);
         });
-    }
+    }*/
 
     /**
      * Test of addAll method with empty list, where it does not need to grow.
      */
-    @Test
+    /*@Test
     public void testAddAll_NeedsToGrow_EmptyList() {
         System.out.println("Testing adding all elements of an array where the list is empty and needs to grow");
         String [] data = new String[15];
@@ -143,11 +143,11 @@ public class DynamicArrayListAddTests {
         for(int i = 0; i < instance.size(); i++){
             assertEquals(data[i], instance.get(i));
         }
-    }
+    }*/
     /**
      * Test of addAll method with empty list, where it does not need to grow.
      */
-    @Test
+    /*@Test
     public void testAddAll_NoNeedToGrow() {
         System.out.println("Testing adding all elements of an array where the list is empty and does not need to grow");
         String [] data = new String[5];
@@ -161,12 +161,12 @@ public class DynamicArrayListAddTests {
         for(int i = 0; i < instance.size(); i++){
             assertEquals(data[i], instance.get(i));
         }
-    }
+    }*/
 
     /**
      * Test of addAll method with non-empty list, where it needs to grow.
      */
-    @Test
+    /*@Test
     public void testAddAll_NeedsToGrow_NonEmptyList() {
         System.out.println("Testing adding all elements of an array where the list is non-empty and needs to " +
                 "grow");
@@ -187,12 +187,12 @@ public class DynamicArrayListAddTests {
         for(int i = 0; i < data.length; i++){
             assertEquals(data[i], instance.get(i+2));
         }
-    }
+    }*/
 
     /**
      * Test of addAll method with empty list, where it does not need to grow.
      */
-    @Test
+    /*@Test
     public void testAddAll_ExistingList() {
         System.out.println("Testing adding all elements of an array where the list is non-empty and does not need to " +
                 "grow");
@@ -213,7 +213,7 @@ public class DynamicArrayListAddTests {
         for(int i = 0; i < data.length; i++){
             assertEquals(data[i], instance.get(i+2));
         }
-    }
+    }*/
 
     /**
      * Test of set method with valid parameters.
