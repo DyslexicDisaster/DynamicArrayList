@@ -90,6 +90,10 @@ public class DynamicArrayList {
 
     //unique methods
 
+    /**
+     * Constructs a new DynamicArrayList object initialized with the elements of the provided array.
+     * @param arr The array of Strings to initialize the list with.
+     */
     public DynamicArrayList(String[] arr) {
         if (arr == null) {
             throw new IllegalArgumentException("Array is null");
@@ -114,6 +118,12 @@ public class DynamicArrayList {
         }
     }
 
+    /**
+     * Replaces the element at the specified position in this list with the String newData.
+     * @param pos The index of the element to be replaced.
+     * @param newData The new data to be stored at the specified position.
+     * @return The original data stored at the specified position before replacement.
+     */
     public String set(int pos, String newData) {
         if (pos < 0 || pos >= numElements) {
             throw new IndexOutOfBoundsException("Invalid position");
@@ -123,6 +133,10 @@ public class DynamicArrayList {
         return og;
     }
 
+    /**
+     *  Returns a copy of this DynamicArrayList instance.
+     *  @return A new DynamicArrayList containing the same elements as this list.
+     */
     public DynamicArrayList clone() {
         DynamicArrayList cloned = new DynamicArrayList();
         for (int i = 0; i < numElements; i++) {
